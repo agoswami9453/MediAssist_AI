@@ -1,0 +1,578 @@
+/* ==========================================
+   User Message
+========================================== */
+
+.user-message{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:18px 18px 0px 18px;
+
+    margin:18px 0;
+
+    margin-left:auto;
+
+    width:fit-content;
+
+    max-width:65%;
+
+    text-align:left;
+
+    align-self:flex-end;
+
+    box-shadow:0 6px 18px rgba(13,110,253,.25);
+
+}
+
+/* ==========================================
+   AI Message
+========================================== */
+
+.bot-message{
+
+    background:#ffffff;
+
+    color:#222;
+
+    padding:18px 22px;
+
+    border-radius:18px 18px 18px 0;
+
+    margin:18px 0;
+
+    width:fit-content;
+
+    max-width:75%;
+
+    text-align:left;
+
+    align-self:flex-start;
+
+    border-left:5px solid #0d6efd;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   Message Time
+========================================== */
+
+.message-time{
+
+    margin-top:10px;
+
+    font-size:12px;
+
+    opacity:.65;
+
+    text-align:right;
+
+}
+
+/* ==========================================
+   Chat History (sidebar - "Recent Chats")
+========================================== */
+
+
+.chat-history{
+
+    flex:1 1 auto;
+
+    min-height:150px;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    padding-right:5px;
+
+}
+
+.sidebar-footer{
+    margin-top:15px;
+    padding-top:10px;
+    border-top:1px solid rgba(255,255,255,.25);
+    flex-shrink:0;
+}
+
+.history-title{
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:18px;
+    font-weight:bold;
+    flex-shrink:0;
+}
+
+.history-item{
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    display:block;
+
+}
+
+.history-item:hover{
+
+    background:rgba(255,255,255,.28);
+
+}
+
+/* Currently selected / loaded history entry */
+.history-item.active{
+
+    background:#ffffff;
+
+    color:#0d6efd;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   Chat History Modal (full, unlimited list)
+========================================== */
+
+.modal-overlay{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:1000;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.modal-overlay.open{
+
+    display:flex;
+
+}
+
+.modal-box{
+
+    background:#fff;
+
+    width:480px;
+
+    max-width:90vw;
+
+    max-height:80vh;
+
+    /* Without this, content taller than max-height just
+       spills out past the visible white box instead of
+       being clipped/scrolled - this was the root cause
+       of the Settings modal looking broken. */
+    overflow:hidden;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    flex-shrink:0;
+
+}
+
+.modal-header h3{
+
+    color:#0d6efd;
+
+    font-size:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.modal-close-btn{
+
+    border:none;
+
+    background:#edf6ff;
+
+    color:#0d6efd;
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+.modal-close-btn:hover{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+}
+
+.modal-search-input{
+
+    height:46px;
+
+    border:2px solid #d7e5ff;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    font-size:15px;
+
+    flex-shrink:0;
+
+}
+
+.modal-search-input:focus{
+
+    outline:none;
+
+    border-color:#0d6efd;
+
+}
+
+.modal-list{
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+/* Reuse the same history-item look, but on a
+   light background instead of the blue sidebar */
+.modal-list .history-item{
+
+    background:#edf6ff;
+
+    color:#222;
+
+}
+
+.modal-list .history-item:hover{
+
+    background:#dbeaff;
+
+}
+
+.modal-list .history-item.active{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+}
+
+.modal-loading{
+
+    text-align:center;
+
+    color:#888;
+
+    padding:20px;
+
+}
+
+/* ==========================================
+   Emoji Picker
+========================================== */
+
+.input-area-wrapper{
+
+    position:relative;
+
+}
+
+.emoji-picker{
+
+    display:none;
+
+    position:absolute;
+
+    bottom:calc(100% + 10px);
+
+    left:0;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:12px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+    z-index:50;
+
+}
+
+.emoji-picker.open{
+
+    display:block;
+
+}
+
+.emoji-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6, 1fr);
+
+    gap:6px;
+
+    max-width:260px;
+
+}
+
+.emoji-option{
+
+    border:none;
+
+    background:transparent;
+
+    font-size:22px;
+
+    padding:6px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.15s;
+
+}
+
+.emoji-option:hover{
+
+    background:#edf6ff;
+
+}
+
+/* ==========================================
+   File Attachment Preview (before sending)
+========================================== */
+
+.file-preview{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    padding:8px 14px;
+
+    margin-bottom:8px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+
+    width:fit-content;
+
+    max-width:100%;
+
+}
+
+.file-preview img{
+
+    width:36px;
+
+    height:36px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+.file-preview i{
+
+    color:#0d6efd;
+
+    font-size:18px;
+
+}
+
+.file-preview span{
+
+    font-size:14px;
+
+    color:#333;
+
+    max-width:220px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+#remove-file-btn{
+
+    border:none;
+
+    background:#f1f1f1;
+
+    color:#666;
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    margin-left:auto;
+
+    flex-shrink:0;
+
+}
+
+#remove-file-btn:hover{
+
+    background:#e0e0e0;
+
+}
+
+/* ==========================================
+   Attachment bubble (inside sent messages)
+========================================== */
+
+.chat-attachment{
+
+    margin-top:10px;
+
+}
+
+.chat-attachment img{
+
+    max-width:220px;
+
+    max-height:220px;
+
+    border-radius:12px;
+
+    display:block;
+
+}
+
+.chat-attachment-file{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:rgba(255,255,255,.15);
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+}
+
+.user-message .chat-attachment-file{
+
+    background:rgba(255,255,255,.2);
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   Reply Language Selector
+========================================== */
+
+.lang-select{
+    width:60px;
+    height:44px;
+    border:2px solid #d7e5ff;
+    border-radius:12px;
+    padding:0 4px;
+    font-size:12px;
+    color:#222;
+    background:#fff;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.lang-select:focus{
+    outline:none;
+    border-color:#0d6efd;
+}
+
+body.dark-mode .lang-select{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #555;
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediAssist AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dark.css') }}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h2>MediAssist AI</h2>
+            <p class="logo-subtitle">AI Medical Assistant</p>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <button class="menu-btn new-chat" id="new-chat-btn">
+                <i class="fa-solid fa-plus"></i>
+                <span>New Chat</span>
+            </button>
+
+            <button class="menu-btn" id="chat-history-btn">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Chat History</span>
+            </button>
+
+            <button class="menu-btn" id="settings-btn">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </button>
+
+            <button class="menu-btn" id="dark-mode-btn">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+
+        </div>
+
+        <div class="history-title">Recent Chats</div>
+
+        <div id="history-container" class="chat-history">
+            <!-- Filled by script.js: latest chats only -->
+        </div>
+
+        <div class="sidebar-footer">
+            Version 2.0
+        </div>
+
+    </aside>
+
+    <main class="chat-section">
+
+        <div class="chat-header">
+            Intelligent First Aid & Symptom Checker
+        </div>
+
+        <div class="persistent-emergency-banner" id="persistent-emergency-banner" style="display:none;">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span id="persistent-emergency-text">In an emergency, call your local emergency number immediately.</span>
+        </div>
+
+        <div class="chat-box" id="chat-box">
+
+            <div class="bot-message" id="welcome-message">
+
+                <strong>🤖 MediAssist AI</strong><br><br>
+
+                Hello 👋<br><br>
+
+                I'm your AI First Aid Assistant.<br><br>
+
+                I can help with:<br><br>
+
+                🩺 Fever<br>
+                🤕 Headache<br>
+                🤢 Vomiting<br>
+                🩹 Cuts<br>
+                🔥 Burns<br>
+                🤧 Cold<br>
+                💓 Chest Pain<br><br>
+
+                ⚠ This assistant provides first-aid guidance only.
+
+            </div>
+
+        </div>
+
+        <div class="input-area-wrapper">
+
+            <!-- Emoji picker popup -->
+            <div class="emoji-picker" id="emoji-picker">
+                <div class="emoji-grid" id="emoji-grid"></div>
+            </div>
+
+            <!-- Shown when a file has been chosen but not sent yet -->
+            <div class="file-preview" id="file-preview" style="display:none;">
+                <img id="file-preview-thumb" src="" alt="" style="display:none;">
+                <i class="fa-solid fa-file" id="file-preview-icon"></i>
+                <span id="file-preview-name"></span>
+                <button type="button" id="remove-file-btn" aria-label="Remove attachment">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="input-area">
+
+                <button class="input-btn" id="emoji-btn" type="button">
+                    <i class="fa-regular fa-face-smile"></i>
+                </button>
+
+                <select id="language-select" class="lang-select" title="Reply language">
+                    <option value="auto">Auto Detect</option>
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="ur">اردو (Urdu)</option>
+                </select>
+
+                <button class="input-btn" id="attach-btn" type="button">
+                    <i class="fa-solid fa-paperclip"></i>
+                </button>
+
+                <input
+                    type="file"
+                    id="file-input"
+                    accept="image/*,.pdf,.doc,.docx,.txt"
+                    style="display:none;">
+
+                <button class="input-btn" id="voice-btn">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+
+                <input
+                    type="text"
+                    id="user-input"
+                    class="form-control"
+                    placeholder="Describe your symptoms..."
+                    autocomplete="off"
+                    maxlength="250">
+
+                <button class="input-btn send-btn" id="send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <aside class="info-panel">
+
+        <h3>Medical Analysis</h3>
+
+        <div class="card-box">
+            <strong>Symptoms</strong><br>
+            <span id="symptom">--</span>
+        </div>
+
+        <div class="card-box">
+            <strong>Severity</strong><br>
+            <span id="severity">--</span>
+        </div>
+
+        <div class="card-box">
+            <strong>Confidence</strong><br>
+            <span id="confidence">--</span>
+        </div>
+
+        <div class="card-box">
+            <strong>First Aid</strong><br>
+            <span id="first-aid">Waiting...</span>
+        </div>
+
+    </aside>
+
+</div>
+
+<!-- ===========================================
+     Chat History Modal
+     Shows EVERY saved conversation (unlimited),
+     as opposed to the sidebar's "Recent Chats"
+     which only shows the latest few.
+=========================================== -->
+<div class="modal-overlay" id="history-modal-overlay">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <h3><i class="fa-solid fa-clock-rotate-left"></i> Chat History</h3>
+            <button class="modal-close-btn" id="close-history-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <input
+            type="text"
+            id="history-search"
+            class="modal-search-input"
+            placeholder="Search past conversations..."
+            autocomplete="off">
+
+        <div class="modal-list" id="full-history-list">
+            <!-- Filled by script.js: full, unlimited history -->
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================================
+     Settings Modal
+=========================================== -->
+<div class="modal-overlay" id="settings-modal-overlay">
+
+    <div class="modal-box settings-box">
+
+        <div class="modal-header">
+            <h3><i class="fa-solid fa-gear"></i> Settings</h3>
+            <button class="modal-close-btn" id="close-settings-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="settings-scroll">
+
+            <!-- Voice & Input -->
+            <div class="settings-section">
+
+                <h4><i class="fa-solid fa-microphone"></i> Voice & Input</h4>
+
+                <div class="settings-row">
+                    <label for="setting-mic-enabled">Enable microphone button</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="setting-mic-enabled">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <label for="setting-voice-language">Voice language</label>
+                    <select id="setting-voice-language" class="settings-select">
+                        <option value="en-US">English (US)</option>
+                        <option value="en-GB">English (UK)</option>
+                        <option value="hi-IN">Hindi</option>
+                        <option value="es-ES">Spanish</option>
+                        <option value="fr-FR">French</option>
+                    </select>
+                </div>
+
+                <div class="settings-row">
+                    <label for="setting-auto-send-voice">Auto-send after voice input</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="setting-auto-send-voice">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Notifications & Sounds -->
+            <div class="settings-section">
+
+                <h4><i class="fa-solid fa-bell"></i> Notifications & Sounds</h4>
+
+                <div class="settings-row">
+                    <label for="setting-sound-on-reply">Play sound on new reply</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="setting-sound-on-reply">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <label for="setting-desktop-notifications">Desktop notifications</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="setting-desktop-notifications">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Emergency Settings -->
+            <div class="settings-section">
+
+                <h4><i class="fa-solid fa-truck-medical"></i> Emergency</h4>
+
+                <div class="settings-row settings-row-stacked">
+                    <label for="setting-emergency-number">Emergency contact number</label>
+                    <input type="tel" id="setting-emergency-number" class="settings-input" placeholder="e.g. 102 or +91 98765 43210">
+                </div>
+
+                <div class="settings-row">
+                    <label for="setting-always-emergency-banner">Always show emergency banner</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="setting-always-emergency-banner">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Privacy & Data -->
+            <div class="settings-section">
+
+                <h4><i class="fa-solid fa-shield-halved"></i> Privacy & Data</h4>
+
+                <div class="settings-row">
+                    <label for="setting-retention-days">Auto-delete history after</label>
+                    <select id="setting-retention-days" class="settings-select">
+                        <option value="0">Never</option>
+                        <option value="7">7 days</option>
+                        <option value="30">30 days</option>
+                        <option value="90">90 days</option>
+                    </select>
+                </div>
+
+                <div class="settings-row">
+                    <label for="setting-dont-save-chats">Don't save chats (private mode)</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="setting-dont-save-chats">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <button type="button" class="settings-danger-btn" id="clear-all-history-btn">
+                    <i class="fa-solid fa-trash"></i> Clear All History Now
+                </button>
+
+            </div>
+
+            <!-- Account / Profile -->
+            <div class="settings-section">
+
+                <h4><i class="fa-solid fa-user"></i> Profile</h4>
+
+                <div class="settings-row settings-row-stacked">
+                    <label for="setting-profile-name">Name</label>
+                    <input type="text" id="setting-profile-name" class="settings-input" placeholder="Your name">
+                </div>
+
+                <div class="settings-row settings-row-stacked">
+                    <label for="setting-profile-age">Age</label>
+                    <input type="number" id="setting-profile-age" class="settings-input" placeholder="Your age" min="0" max="120">
+                </div>
+
+                <div class="settings-row settings-row-stacked">
+                    <label for="setting-profile-allergies">Known allergies / conditions</label>
+                    <textarea id="setting-profile-allergies" class="settings-input" rows="2" placeholder="e.g. Penicillin allergy, asthma"></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button type="button" class="settings-save-btn" id="save-settings-btn">
+            Save Settings
+        </button>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

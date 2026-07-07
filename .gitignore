@@ -1,0 +1,26 @@
+# Virtual Environment
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Model files
+*.pkl
+
+# Database
+*.db
+*.sqlite3
+*.db-journal
+
+# Uploads
+uploads/
+
+# VS Code / Cursor
+.vscode/
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db

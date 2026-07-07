@@ -1,0 +1,362 @@
+/* ==========================================
+   Settings Modal
+   All selectors are scoped under .settings-box
+   / specific classes to avoid Bootstrap's
+   default label/input/select styling bleeding
+   through and collapsing the layout.
+========================================== */
+
+.settings-box{
+
+    width:520px;
+
+    max-width:92vw;
+
+}
+
+.settings-scroll{
+
+    overflow-y:auto;
+
+    flex:1;
+
+    min-height:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    padding-right:6px;
+
+    margin-right:-6px;
+
+}
+
+.settings-section{
+
+    background:#f7fafd;
+
+    border-radius:16px;
+
+    padding:16px 18px;
+
+}
+
+.settings-section h4{
+
+    color:#0d6efd;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.04em;
+
+    margin:0 0 10px 0;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #dfeaff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+/* Each row: label on the left, control on the right.
+   Grid guarantees the two-column layout regardless of
+   any external stylesheet's label/input defaults. */
+.settings-row{
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    align-items:center;
+
+    column-gap:16px;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #eaf1fc;
+
+}
+
+.settings-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.settings-row label{
+
+    font-size:14px;
+
+    color:#333;
+
+    line-height:1.4;
+
+}
+
+/* Stacked rows (text inputs / textarea) go label
+   above, full-width field below, instead of side by side */
+.settings-row-stacked{
+
+    grid-template-columns:1fr;
+
+    row-gap:8px;
+
+}
+
+.settings-select,
+.settings-input{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    border:2px solid #d7e5ff;
+
+    border-radius:10px;
+
+    padding:9px 12px;
+
+    font-size:14px;
+
+    font-family:inherit;
+
+    color:#222;
+
+    background:#fff;
+
+}
+
+/* Non-stacked rows (dropdowns next to a label)
+   shouldn't stretch full width, just size to content */
+.settings-row:not(.settings-row-stacked) .settings-select{
+
+    width:auto;
+
+    min-width:140px;
+
+}
+
+.settings-select:focus,
+.settings-input:focus{
+
+    outline:none;
+
+    border-color:#0d6efd;
+
+}
+
+textarea.settings-input{
+
+    resize:vertical;
+
+}
+
+/* ==========================================
+   Toggle Switch (replaces plain checkboxes)
+========================================== */
+
+.toggle-switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:46px;
+
+    height:26px;
+
+    flex-shrink:0;
+
+}
+
+.toggle-switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+    position:absolute;
+
+}
+
+.toggle-slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#d7e0ee;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.toggle-slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:3px;
+
+    top:3px;
+
+    width:20px;
+
+    height:20px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    transition:.2s;
+
+    box-shadow:0 1px 3px rgba(0,0,0,.25);
+
+}
+
+.toggle-switch input:checked + .toggle-slider{
+
+    background:#0d6efd;
+
+}
+
+.toggle-switch input:checked + .toggle-slider::before{
+
+    transform:translateX(20px);
+
+}
+
+/* ==========================================
+   Buttons inside Settings
+========================================== */
+
+.settings-danger-btn{
+
+    margin-top:14px;
+
+    width:100%;
+
+    border:none;
+
+    background:#fdeaea;
+
+    color:#dc3545;
+
+    padding:11px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    transition:.2s;
+
+}
+
+.settings-danger-btn:hover{
+
+    background:#dc3545;
+
+    color:#fff;
+
+}
+
+.settings-save-btn{
+
+    border:none;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    margin-top:20px;
+
+    flex-shrink:0;
+
+}
+
+.settings-save-btn:hover{
+
+    background:#0056d6;
+
+}
+
+.settings-save-btn.saved{
+
+    background:#28a745;
+
+}
+
+/* ==========================================
+   Persistent Emergency Banner
+   (Settings > Emergency > Always show banner)
+========================================== */
+
+.persistent-emergency-banner{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#ffebee;
+
+    border-left:6px solid red;
+
+    color:#b30000;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    flex-shrink:0;
+
+}
+
+.persistent-emergency-banner i{
+
+    font-size:18px;
+
+}

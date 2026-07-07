@@ -1,0 +1,57 @@
+/* ==========================================
+   Dark Mode
+========================================== */
+
+body.dark-mode{
+
+    background:#121212;
+
+    color:#ffffff;
+
+}
+
+body.dark-mode .chat-box{
+
+    background:#1e1e1e;
+
+    color:white;
+
+}
+
+body.dark-mode .chat-header{
+
+    color:#66b3ff;
+
+}
+
+body.dark-mode .info-panel{
+
+    background:#1e1e1e;
+
+    color:white;
+
+}
+
+body.dark-mode .card-box{
+
+    background:#2b2b2b;
+
+    color:white;
+
+}
+
+body.dark-mode #user-input{
+
+    background:#2b2b2b;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+
+body.dark-mode .input-area{
+
+    background:#1e1e1e;
+
+}

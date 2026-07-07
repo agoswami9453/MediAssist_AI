@@ -1,0 +1,186 @@
+user_input,category,severity,first_aid,emergency
+i have a high fever,Fever,Moderate,"Rest, drink fluids, take paracetamol if needed, and monitor temperature.",No
+my body temperature is very high,Fever,Moderate,"Rest, drink fluids, take paracetamol if needed, and monitor temperature.",No
+i feel feverish and hot,Fever,Moderate,"Rest, drink fluids, take paracetamol if needed, and monitor temperature.",No
+i have chills and fever,Fever,Moderate,"Rest, drink fluids, take paracetamol if needed, and monitor temperature.",No
+my child has a fever,Fever,Moderate,"Rest, drink fluids, take paracetamol if needed, and monitor temperature.",No
+i have a headache,Headache,Mild,"Rest in a quiet dark room, stay hydrated, take a mild pain reliever if needed.",No
+my head is hurting,Headache,Mild,"Rest in a quiet dark room, stay hydrated, take a mild pain reliever if needed.",No
+i have a throbbing headache,Headache,Mild,"Rest in a quiet dark room, stay hydrated, take a mild pain reliever if needed.",No
+i feel pain in my head,Headache,Mild,"Rest in a quiet dark room, stay hydrated, take a mild pain reliever if needed.",No
+severe headache since morning,Headache,Mild,"Rest in a quiet dark room, stay hydrated, take a mild pain reliever if needed.",No
+i am vomiting,Vomiting,Moderate,"Sip small amounts of water, avoid solid food temporarily, rest.",No
+i feel like throwing up,Vomiting,Moderate,"Sip small amounts of water, avoid solid food temporarily, rest.",No
+i have been vomiting since morning,Vomiting,Moderate,"Sip small amounts of water, avoid solid food temporarily, rest.",No
+my stomach feels sick and i am vomiting,Vomiting,Moderate,"Sip small amounts of water, avoid solid food temporarily, rest.",No
+i vomited after eating,Vomiting,Moderate,"Sip small amounts of water, avoid solid food temporarily, rest.",No
+i have a cut on my hand,Cut,Mild,"Clean the wound with water, apply antiseptic, cover with a clean bandage.",No
+i got a small cut while cooking,Cut,Mild,"Clean the wound with water, apply antiseptic, cover with a clean bandage.",No
+my finger is bleeding from a cut,Cut,Mild,"Clean the wound with water, apply antiseptic, cover with a clean bandage.",No
+i accidentally cut myself,Cut,Mild,"Clean the wound with water, apply antiseptic, cover with a clean bandage.",No
+there is a deep cut on my leg,Cut,Mild,"Clean the wound with water, apply antiseptic, cover with a clean bandage.",No
+i burned my hand,Burn,Moderate,"Cool the burn under running water for 10 minutes, do not apply ice, cover loosely.",No
+i got a burn from hot oil,Burn,Moderate,"Cool the burn under running water for 10 minutes, do not apply ice, cover loosely.",No
+my skin is burned,Burn,Moderate,"Cool the burn under running water for 10 minutes, do not apply ice, cover loosely.",No
+i touched a hot pan and it burned me,Burn,Moderate,"Cool the burn under running water for 10 minutes, do not apply ice, cover loosely.",No
+i have a burn mark on my arm,Burn,Moderate,"Cool the burn under running water for 10 minutes, do not apply ice, cover loosely.",No
+i have a cold,Common Cold,Mild,"Rest, drink warm fluids, use steam inhalation, take rest.",No
+i am sneezing and have a runny nose,Common Cold,Mild,"Rest, drink warm fluids, use steam inhalation, take rest.",No
+i think i caught a cold,Common Cold,Mild,"Rest, drink warm fluids, use steam inhalation, take rest.",No
+my nose is blocked,Common Cold,Mild,"Rest, drink warm fluids, use steam inhalation, take rest.",No
+i have cold symptoms,Common Cold,Mild,"Rest, drink warm fluids, use steam inhalation, take rest.",No
+i have chest pain,Chest Pain,Severe,"Sit upright, stay calm, call emergency services immediately, do not exert yourself.",Yes
+my chest hurts a lot,Chest Pain,Severe,"Sit upright, stay calm, call emergency services immediately, do not exert yourself.",Yes
+i feel pressure in my chest,Chest Pain,Severe,"Sit upright, stay calm, call emergency services immediately, do not exert yourself.",Yes
+there is tightness in my chest,Chest Pain,Severe,"Sit upright, stay calm, call emergency services immediately, do not exert yourself.",Yes
+i have sharp pain in my chest,Chest Pain,Severe,"Sit upright, stay calm, call emergency services immediately, do not exert yourself.",Yes
+i have loose motion,Diarrhea,Moderate,"Drink oral rehydration solution, avoid oily food, rest.",No
+i have diarrhea,Diarrhea,Moderate,"Drink oral rehydration solution, avoid oily food, rest.",No
+my stomach is upset with frequent loose stools,Diarrhea,Moderate,"Drink oral rehydration solution, avoid oily food, rest.",No
+i have stomach ache and loose motion,Diarrhea,Moderate,"Drink oral rehydration solution, avoid oily food, rest.",No
+i keep having to run to the bathroom,Diarrhea,Moderate,"Drink oral rehydration solution, avoid oily food, rest.",No
+i have a sore throat,Sore Throat,Mild,"Gargle with warm salt water, drink warm fluids, avoid cold drinks.",No
+my throat hurts when i swallow,Sore Throat,Mild,"Gargle with warm salt water, drink warm fluids, avoid cold drinks.",No
+i have a scratchy throat,Sore Throat,Mild,"Gargle with warm salt water, drink warm fluids, avoid cold drinks.",No
+my throat feels irritated,Sore Throat,Mild,"Gargle with warm salt water, drink warm fluids, avoid cold drinks.",No
+i have pain while talking due to my throat,Sore Throat,Mild,"Gargle with warm salt water, drink warm fluids, avoid cold drinks.",No
+i have a skin rash and itching,Allergic Reaction,Moderate,"Avoid the allergen, apply a cool compress, take an antihistamine if available.",No
+i am having an allergic reaction,Allergic Reaction,Moderate,"Avoid the allergen, apply a cool compress, take an antihistamine if available.",No
+my skin is itchy and red after eating something,Allergic Reaction,Moderate,"Avoid the allergen, apply a cool compress, take an antihistamine if available.",No
+i broke out in hives,Allergic Reaction,Moderate,"Avoid the allergen, apply a cool compress, take an antihistamine if available.",No
+my face is swelling after i ate peanuts,Allergic Reaction,Severe,"Seek emergency help immediately if swelling affects breathing, use an epinephrine auto-injector if prescribed.",Yes
+i twisted my ankle,Sprain,Moderate,"Rest, apply ice, compress with a bandage, elevate the limb.",No
+i sprained my wrist,Sprain,Moderate,"Rest, apply ice, compress with a bandage, elevate the limb.",No
+my ankle is swollen after i fell,Sprain,Moderate,"Rest, apply ice, compress with a bandage, elevate the limb.",No
+i rolled my foot while running,Sprain,Moderate,"Rest, apply ice, compress with a bandage, elevate the limb.",No
+i have a swollen joint after twisting it,Sprain,Moderate,"Rest, apply ice, compress with a bandage, elevate the limb.",No
+i have a nosebleed,Nosebleed,Mild,"Sit up and lean forward slightly, pinch the soft part of the nose for 10 minutes.",No
+my nose is bleeding,Nosebleed,Mild,"Sit up and lean forward slightly, pinch the soft part of the nose for 10 minutes.",No
+i got a bloody nose,Nosebleed,Mild,"Sit up and lean forward slightly, pinch the soft part of the nose for 10 minutes.",No
+blood is coming from my nose,Nosebleed,Mild,"Sit up and lean forward slightly, pinch the soft part of the nose for 10 minutes.",No
+my nose started bleeding suddenly,Nosebleed,Mild,"Sit up and lean forward slightly, pinch the soft part of the nose for 10 minutes.",No
+i got bitten by an insect,Insect Bite,Mild,"Clean the area, apply a cold compress, avoid scratching, use anti-itch cream.",No
+a mosquito bit me and it is swollen,Insect Bite,Mild,"Clean the area, apply a cold compress, avoid scratching, use anti-itch cream.",No
+i have a bee sting,Insect Bite,Moderate,"Remove the stinger carefully, clean the area, apply a cold compress, watch for allergic reaction.",No
+something bit me and the area is red and itchy,Insect Bite,Mild,"Clean the area, apply a cold compress, avoid scratching, use anti-itch cream.",No
+i have an insect bite that is swelling,Insect Bite,Moderate,"Clean the area, apply a cold compress, avoid scratching, watch for signs of allergic reaction.",No
+i think i have food poisoning,Food Poisoning,Moderate,"Stay hydrated, rest, avoid solid food until stomach settles, seek care if symptoms worsen.",No
+i feel sick after eating outside food,Food Poisoning,Moderate,"Stay hydrated, rest, avoid solid food until stomach settles, seek care if symptoms worsen.",No
+i have stomach cramps and nausea after a meal,Food Poisoning,Moderate,"Stay hydrated, rest, avoid solid food until stomach settles, seek care if symptoms worsen.",No
+i am vomiting and have diarrhea after dinner,Food Poisoning,Moderate,"Stay hydrated, rest, avoid solid food until stomach settles, seek care if symptoms worsen.",No
+the food i ate is making me feel unwell,Food Poisoning,Moderate,"Stay hydrated, rest, avoid solid food until stomach settles, seek care if symptoms worsen.",No
+i feel very thirsty and weak,Dehydration,Moderate,"Drink water or oral rehydration solution slowly, rest in a cool place.",No
+my mouth is dry and i feel dizzy,Dehydration,Moderate,"Drink water or oral rehydration solution slowly, rest in a cool place.",No
+i haven't had water all day and feel weak,Dehydration,Moderate,"Drink water or oral rehydration solution slowly, rest in a cool place.",No
+i feel dehydrated after exercise,Dehydration,Moderate,"Drink water or oral rehydration solution slowly, rest in a cool place.",No
+i have dark urine and feel very thirsty,Dehydration,Moderate,"Drink water or oral rehydration solution slowly, rest in a cool place.",No
+i have a bad migraine,Migraine,Moderate,"Rest in a dark quiet room, apply a cold compress to the forehead, stay hydrated.",No
+i get migraines with nausea and light sensitivity,Migraine,Moderate,"Rest in a dark quiet room, apply a cold compress to the forehead, stay hydrated.",No
+one side of my head is throbbing badly,Migraine,Moderate,"Rest in a dark quiet room, apply a cold compress to the forehead, stay hydrated.",No
+bright light is making my headache worse,Migraine,Moderate,"Rest in a dark quiet room, apply a cold compress to the forehead, stay hydrated.",No
+i have a migraine attack,Migraine,Moderate,"Rest in a dark quiet room, apply a cold compress to the forehead, stay hydrated.",No
+i have back pain,Back Pain,Mild,"Rest, apply a warm compress, avoid heavy lifting, maintain good posture.",No
+my lower back hurts after lifting something heavy,Back Pain,Mild,"Rest, apply a warm compress, avoid heavy lifting, maintain good posture.",No
+i have pain in my spine,Back Pain,Mild,"Rest, apply a warm compress, avoid heavy lifting, maintain good posture.",No
+sitting too long is hurting my back,Back Pain,Mild,"Rest, apply a warm compress, avoid heavy lifting, maintain good posture.",No
+i strained my back exercising,Back Pain,Mild,"Rest, apply a warm compress, avoid heavy lifting, maintain good posture.",No
+i have a toothache,Toothache,Mild,"Rinse with warm salt water, take a mild pain reliever, avoid very hot or cold food.",No
+my tooth is hurting badly,Toothache,Mild,"Rinse with warm salt water, take a mild pain reliever, avoid very hot or cold food.",No
+i have pain in my gums and teeth,Toothache,Mild,"Rinse with warm salt water, take a mild pain reliever, avoid very hot or cold food.",No
+my tooth hurts when i eat something cold,Toothache,Mild,"Rinse with warm salt water, take a mild pain reliever, avoid very hot or cold food.",No
+i have a swollen jaw and toothache,Toothache,Moderate,"Rinse with warm salt water, take a mild pain reliever, see a dentist soon.",No
+my eyes are red and irritated,Eye Irritation,Mild,"Rinse eyes gently with clean water, avoid rubbing, avoid contact lenses temporarily.",No
+i have something in my eye and it hurts,Eye Irritation,Mild,"Rinse eyes gently with clean water, avoid rubbing, avoid contact lenses temporarily.",No
+my eyes are itchy and watery,Eye Irritation,Mild,"Rinse eyes gently with clean water, avoid rubbing, avoid contact lenses temporarily.",No
+dust got into my eye,Eye Irritation,Mild,"Rinse eyes gently with clean water, avoid rubbing, avoid contact lenses temporarily.",No
+i have burning sensation in my eyes,Eye Irritation,Mild,"Rinse eyes gently with clean water, avoid rubbing, avoid contact lenses temporarily.",No
+i have an ear ache,Ear Pain,Mild,"Apply a warm compress to the ear, avoid inserting objects, rest.",No
+my ear hurts and feels blocked,Ear Pain,Mild,"Apply a warm compress to the ear, avoid inserting objects, rest.",No
+i have pain inside my ear,Ear Pain,Mild,"Apply a warm compress to the ear, avoid inserting objects, rest.",No
+water got into my ear and it hurts,Ear Pain,Mild,"Apply a warm compress to the ear, avoid inserting objects, rest.",No
+i have an earache and slight hearing loss,Ear Pain,Moderate,"Apply a warm compress, avoid inserting objects, consult a doctor if it persists.",No
+i feel very anxious and my heart is racing,Anxiety Attack,Moderate,"Practice slow deep breathing, sit somewhere calm, ground yourself by naming things around you.",No
+i am having a panic attack,Anxiety Attack,Moderate,"Practice slow deep breathing, sit somewhere calm, ground yourself by naming things around you.",No
+i feel overwhelmed and can't calm down,Anxiety Attack,Moderate,"Practice slow deep breathing, sit somewhere calm, ground yourself by naming things around you.",No
+my hands are shaking and i feel panicked,Anxiety Attack,Moderate,"Practice slow deep breathing, sit somewhere calm, ground yourself by naming things around you.",No
+i feel a sense of dread and my chest feels tight from anxiety,Anxiety Attack,Moderate,"Practice slow deep breathing, sit somewhere calm, ground yourself by naming things around you.",No
+i feel like i am going to faint,Fainting,Moderate,"Lie down and elevate the legs, loosen tight clothing, ensure fresh air.",No
+i fainted for a few seconds,Fainting,Moderate,"Lie down and elevate the legs, loosen tight clothing, ensure fresh air.",No
+my vision is going dark and i feel dizzy and weak,Fainting,Moderate,"Lie down and elevate the legs, loosen tight clothing, ensure fresh air.",No
+i feel lightheaded and about to pass out,Fainting,Moderate,"Lie down and elevate the legs, loosen tight clothing, ensure fresh air.",No
+someone near me just fainted,Fainting,Moderate,"Lie down and elevate the legs, loosen tight clothing, ensure fresh air.",No
+i feel extremely hot and dizzy after being in the sun,Heat Stroke,Severe,"Move to a cool place immediately, apply cool water, seek emergency care.",Yes
+i think i have heat stroke,Heat Stroke,Severe,"Move to a cool place immediately, apply cool water, seek emergency care.",Yes
+i have stopped sweating and feel confused in the heat,Heat Stroke,Severe,"Move to a cool place immediately, apply cool water, seek emergency care.",Yes
+my body temperature is very high after being outside in the sun,Heat Stroke,Severe,"Move to a cool place immediately, apply cool water, seek emergency care.",Yes
+i feel nauseous and dizzy from the heat,Heat Stroke,Severe,"Move to a cool place immediately, apply cool water, seek emergency care.",Yes
+i have a muscle cramp in my leg,Muscle Cramp,Mild,"Gently stretch and massage the muscle, apply heat, stay hydrated.",No
+my calf muscle is cramping,Muscle Cramp,Mild,"Gently stretch and massage the muscle, apply heat, stay hydrated.",No
+i got a sudden cramp while exercising,Muscle Cramp,Mild,"Gently stretch and massage the muscle, apply heat, stay hydrated.",No
+my leg muscles are tight and painful,Muscle Cramp,Mild,"Gently stretch and massage the muscle, apply heat, stay hydrated.",No
+i have cramps after a workout,Muscle Cramp,Mild,"Gently stretch and massage the muscle, apply heat, stay hydrated.",No
+i have a rash on my skin,Skin Rash,Mild,"Avoid scratching, keep the area clean and dry, apply a soothing lotion.",No
+my skin has red itchy patches,Skin Rash,Mild,"Avoid scratching, keep the area clean and dry, apply a soothing lotion.",No
+i broke out in a rash after using a new product,Skin Rash,Mild,"Avoid scratching, keep the area clean and dry, apply a soothing lotion.",No
+there are bumps on my skin that itch,Skin Rash,Mild,"Avoid scratching, keep the area clean and dry, apply a soothing lotion.",No
+my skin looks inflamed and itchy,Skin Rash,Mild,"Avoid scratching, keep the area clean and dry, apply a soothing lotion.",No
+i am constipated,Constipation,Mild,"Drink plenty of water, eat fiber-rich foods, stay active.",No
+i haven't been able to pass stool for days,Constipation,Mild,"Drink plenty of water, eat fiber-rich foods, stay active.",No
+my stomach feels bloated and i can't go to the bathroom,Constipation,Mild,"Drink plenty of water, eat fiber-rich foods, stay active.",No
+i feel constipated and uncomfortable,Constipation,Mild,"Drink plenty of water, eat fiber-rich foods, stay active.",No
+i have not had a bowel movement in a while,Constipation,Mild,"Drink plenty of water, eat fiber-rich foods, stay active.",No
+it burns when i urinate,Urinary Tract Infection,Moderate,"Drink plenty of water, avoid holding urine, consult a doctor for antibiotics if needed.",No
+i feel a burning sensation while peeing,Urinary Tract Infection,Moderate,"Drink plenty of water, avoid holding urine, consult a doctor for antibiotics if needed.",No
+i have frequent urge to urinate with pain,Urinary Tract Infection,Moderate,"Drink plenty of water, avoid holding urine, consult a doctor for antibiotics if needed.",No
+i think i have a urinary infection,Urinary Tract Infection,Moderate,"Drink plenty of water, avoid holding urine, consult a doctor for antibiotics if needed.",No
+my lower abdomen hurts and urination burns,Urinary Tract Infection,Moderate,"Drink plenty of water, avoid holding urine, consult a doctor for antibiotics if needed.",No
+I have fever,Fever,Mild,"Drink plenty of water, rest, and monitor your temperature.",No
+My body is hot,Fever,Mild,"Drink plenty of water, rest, and monitor your temperature.",No
+High temperature since yesterday,Fever,Mild,"Drink plenty of water, rest, and monitor your temperature.",No
+I think I have a fever,Fever,Mild,"Drink plenty of water, rest, and monitor your temperature.",No
+I am feeling feverish,Fever,Mild,"Drink plenty of water, rest, and monitor your temperature.",No
+I have a cold,Common Cold,Mild,"Rest, stay hydrated, and use warm fluids if needed.",No
+My nose is blocked,Common Cold,Mild,"Rest, stay hydrated, and use warm fluids if needed.",No
+I keep sneezing,Common Cold,Mild,"Rest, stay hydrated, and use warm fluids if needed.",No
+Runny nose and sneezing,Common Cold,Mild,"Rest, stay hydrated, and use warm fluids if needed.",No
+I caught a cold,Common Cold,Mild,"Rest, stay hydrated, and use warm fluids if needed.",No
+I have headache,Headache,Mild,Rest in a quiet room and drink enough water.,No
+My head hurts,Headache,Mild,Rest in a quiet room and drink enough water.,No
+Pain in my head,Headache,Mild,Rest in a quiet room and drink enough water.,No
+Severe headache today,Headache,Moderate,Rest in a quiet room and drink enough water. Seek medical advice if severe.,No
+I have migraine,Migraine,Moderate,Rest in a dark quiet room and avoid bright light.,No
+Light hurts my eyes,Migraine,Moderate,Rest in a dark quiet room and avoid bright light.,No
+I have sore throat,Sore Throat,Mild,Drink warm fluids and gargle with warm salt water.,No
+Pain while swallowing,Sore Throat,Mild,Drink warm fluids and gargle with warm salt water.,No
+My throat hurts,Sore Throat,Mild,Drink warm fluids and gargle with warm salt water.,No
+I have cough,Cough,Mild,Drink warm fluids and monitor symptoms.,No
+Dry cough,Cough,Mild,Drink warm fluids and monitor symptoms.,No
+Continuous coughing,Cough,Moderate,Drink warm fluids. Seek medical advice if it persists.,No
+I feel dizzy,Dizziness,Moderate,Sit or lie down immediately and drink water.,No
+Feeling dizzy,Dizziness,Moderate,Sit or lie down immediately and drink water.,No
+Room is spinning,Dizziness,Moderate,Sit or lie down immediately and drink water.,No
+I have vomiting,Vomiting,Moderate,Drink oral rehydration solution in small sips.,No
+Vomiting since morning,Vomiting,Moderate,Drink oral rehydration solution in small sips.,No
+I threw up,Vomiting,Moderate,Drink oral rehydration solution in small sips.,No
+I have diarrhea,Diarrhea,Moderate,Drink ORS frequently to prevent dehydration.,No
+Loose motions,Diarrhea,Moderate,Drink ORS frequently to prevent dehydration.,No
+Stomach upset with diarrhea,Diarrhea,Moderate,Drink ORS frequently to prevent dehydration.,No
+I cut my finger,Cut,Moderate,"Wash the wound, apply pressure, and cover with a clean bandage.",No
+Knife cut on my hand,Cut,Moderate,"Wash the wound, apply pressure, and cover with a clean bandage.",No
+My finger is bleeding,Cut,Moderate,"Wash the wound, apply pressure, and cover with a clean bandage.",No
+I burned my hand,Burn,Moderate,Cool the burn under running water for at least 20 minutes.,No
+Hot oil burned me,Burn,Moderate,Cool the burn under running water for at least 20 minutes.,No
+Touched a hot pan,Burn,Moderate,Cool the burn under running water for at least 20 minutes.,No
+I twisted my ankle,Sprain,Moderate,"Rest, apply ice, compress, and elevate the injured area.",No
+My ankle is swollen,Sprain,Moderate,"Rest, apply ice, compress, and elevate the injured area.",No
+I have a sprain,Sprain,Moderate,"Rest, apply ice, compress, and elevate the injured area.",No
+Bee sting on my arm,Bee Sting,Mild,Remove the stinger if present and apply a cold pack.,No
+A bee stung me,Bee Sting,Mild,Remove the stinger if present and apply a cold pack.,No
+Dog bite on my leg,Dog Bite,Urgent,Wash the wound immediately and seek medical care for rabies evaluation.,Yes
+A dog bit me,Dog Bite,Urgent,Wash the wound immediately and seek medical care for rabies evaluation.,Yes
+Snake bite on my foot,Snake Bite,Emergency,Keep still and seek emergency medical care immediately.,Yes
+Snake has bitten me,Snake Bite,Emergency,Keep still and seek emergency medical care immediately.,Yes
+I have chest pain,Chest Pain,Emergency,Call emergency services immediately. Sit calmly and avoid exertion.,Yes
+Pain in my chest,Chest Pain,Emergency,Call emergency services immediately. Sit calmly and avoid exertion.,Yes
+Difficulty breathing,Difficulty Breathing,Emergency,Call emergency services immediately and keep the airway clear.,Yes
+I cannot breathe properly,Difficulty Breathing,Emergency,Call emergency services immediately and keep the airway clear.,Yes
