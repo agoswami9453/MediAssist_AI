@@ -132,6 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
         applySettings();
 
     }
+    // Apply instantly the moment any setting is changed —
+    // don't require the user to find/click Save first.
+    Object.values(settingFields).forEach(field => {
+        field.addEventListener("change", saveSettings);
+    });
 
     function populateSettingsForm() {
 
