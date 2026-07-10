@@ -81,11 +81,15 @@ class MedicalPredictor:
         first_aid = str(row["first_aid"])
         emergency = str(row["emergency"])
 
+        note = ("This advice is for first aid only. If symptoms become "
+                "severe or persist, please consult a qualified healthcare professional.")
+
         if reply_lang != "en":
             category = self.translate(category, source="en", target=reply_lang)
             severity = self.translate(severity, source="en", target=reply_lang)
             first_aid = self.translate(first_aid, source="en", target=reply_lang)
             emergency = self.translate(emergency, source="en", target=reply_lang)
+            note = self.translate(note, source="en", target=reply_lang)
 
         return {
             "success": True,
@@ -93,7 +97,8 @@ class MedicalPredictor:
             "severity": severity,
             "first_aid": first_aid,
             "emergency": emergency,
-            "confidence": confidence
+            "confidence": confidence,
+            "note": note
         }
 
 
