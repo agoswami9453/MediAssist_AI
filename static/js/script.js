@@ -854,9 +854,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${data.emergency}<br><br>
 
                 📌 <strong>Note:</strong><br>
-                This advice is for first aid only.
-                If symptoms become severe or persist,
-                please consult a qualified healthcare professional.
+                ${data.note}
                 ${buildAllergyNoteHTML()}
                 `,
                 "bot-message"
