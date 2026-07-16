@@ -65,6 +65,8 @@ class Database:
 
             emergency TEXT,
 
+            note TEXT,
+
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
         )
@@ -93,25 +95,40 @@ class Database:
                 "ALTER TABLE chat_history ADD COLUMN emergency TEXT"
             )
 
+        if "emergency" not in existing_columns:
+            self.cursor.execute(
+                "ALTER TABLE chat_history ADD COLUMN emergency TEXT"
+            )
+
+        if "type" not in existing_columns:
+            self.cursor.execute(
+                "ALTER TABLE chat_history ADD COLUMN type TEXT"
+            )
+
         self.connection.commit()
 
     def save_chat(self, user_message, bot_response, severity,
-                  confidence, category=None, emergency=None):
+                  confidence, category=None, emergency=None, type=None):
         """
         Save a conversation to the database.
+
+        'type' is 'symptom' for the first-aid checker, 'info' for
+        disease/medicine facts, or 'medicine_advice' for medicine
+        recommendations.
         """
 
         self.cursor.execute("""
         INSERT INTO chat_history
-        (user_message, bot_response, severity, confidence, category, emergency)
-        VALUES (?, ?, ?, ?, ?, ?)
+        (user_message, bot_response, severity, confidence, category, emergency, type)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
         """, (
             user_message,
             bot_response,
             severity,
             confidence,
             category,
-            emergency
+            emergency,
+            type
         ))
 
         self.connection.commit()
@@ -119,7 +136,7 @@ class Database:
     def get_all_chats(self):
         self.cursor.execute("""
         SELECT id, user_message, bot_response, severity,
-               confidence, category, emergency
+               confidence, category, emergency, type
         FROM chat_history
         ORDER BY id DESC
         """)
