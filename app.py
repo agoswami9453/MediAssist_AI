@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, jsonify
-
+from flask import Flask, render_template, request, jsonify, session
 from database import db
 
 from predict import predictor
@@ -43,7 +42,16 @@ def predict():
             "message": "Please enter your symptoms."
         })
 
-    result = predictor.predict(user_message, target_lang=target_lang)
+    context_topic = session.get("last_topic")
+
+    result = predictor.predict(
+        user_message,
+        target_lang=target_lang,
+        context_topic=context_topic
+    )
+
+    if result.get("topic"):
+        session["last_topic"] = result["topic"]
 
     if save_to_history:
         db.save_chat(
@@ -52,7 +60,8 @@ def predict():
             severity=result["severity"],
             confidence=result["confidence"],
             category=result.get("category"),
-            emergency=result.get("emergency")
+            emergency=result.get("emergency"),
+            type=result.get("type")
         )
 
     return jsonify(result)
@@ -80,9 +89,11 @@ def history():
 
             "confidence": chat[4],
 
-            "category": chat[5],
+           "category": chat[5],
 
-            "emergency": chat[6]
+            "emergency": chat[6],
+
+            "type": chat[7]
 
         })
 
@@ -114,6 +125,18 @@ def cleanup_history():
     if days and int(days) > 0:
 
         db.delete_old_chats(days)
+
+    return jsonify({"success": True})
+
+
+@app.route("/reset_context", methods=["POST"])
+def reset_context():
+    """
+    Clears the remembered conversation topic. Called when the user
+    clicks "New Chat".
+    """
+
+    session.pop("last_topic", None)
 
     return jsonify({"success": True})
 
